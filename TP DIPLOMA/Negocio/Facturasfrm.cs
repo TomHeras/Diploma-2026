@@ -26,8 +26,10 @@ namespace TP_DIPLOMA.Negocio
         }
         private void Facturasfrm_Load(object sender, EventArgs e)
         {
+            // TODO: esta línea de código carga datos en la tabla 'tPMODELOSDataSet10.estados' Puede moverla o quitarla según sea necesario.
+            this.estadosTableAdapter1.Fill(this.tPMODELOSDataSet10.estados);
             // TODO: esta línea de código carga datos en la tabla 'tPMODELOSDataSet6.estados' Puede moverla o quitarla según sea necesario.
-            this.estadosTableAdapter.Fill(this.tPMODELOSDataSet6.estados);
+            //this.estadosTableAdapter.Fill(this.tPMODELOSDataSet6.estados);ESCRITORIO
             enlazar();
         }
 
@@ -62,6 +64,11 @@ namespace TP_DIPLOMA.Negocio
             var detalles = gestor.listardetalles().Where(x => x.ID_pedido.ToString() == textBox1.Text).ToList();
 
             dataGridView1.DataSource = detalles;
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            gestor.xmlventa();
         }
     }
 }

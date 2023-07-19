@@ -41,8 +41,10 @@ namespace TP_DIPLOMA
         }
         private void ABMusuarios_Load(object sender, EventArgs e)
         {
+            // TODO: esta línea de código carga datos en la tabla 'tPMODELOSDataSet12.Idioma' Puede moverla o quitarla según sea necesario.
+            //this.idiomaTableAdapter1.Fill(this.tPMODELOSDataSet12.Idioma);
             // TODO: esta línea de código carga datos en la tabla 'tPMODELOSDataSet7.Idioma' Puede moverla o quitarla según sea necesario.
-            this.idiomaTableAdapter.Fill(this.tPMODELOSDataSet7.Idioma);
+            //this.idiomaTableAdapter.Fill(this.tPMODELOSDataSet7.Idioma);
             enlazar();
         }
 
@@ -99,9 +101,9 @@ namespace TP_DIPLOMA
                             var pass = controlUsuario3.Texto;
                             user.Password = Encriptador.Hash(pass);
                             user.Mail = controlUsuario4.Texto;
-                            user.Estado = bool.Parse(comboBox2.SelectedIndex.ToString());
+                            user.Estado = true;
                             user.Baja_logica = false;
-                            user.UsuDVH = 1;
+                            user.UsuDVH = 0;
 
                     foreach (BE.userauxiliar item in gestorusuarios.Listadeusu())
                     {
@@ -115,13 +117,14 @@ namespace TP_DIPLOMA
                     {
                         gestorusuarios.crearusuario(user);
                         MessageBox.Show("El usuario fue creado con exito!");
-
+                        DigitosVerificadores();
                         limpiar();
                         enlazar();
                     }
                     else
                     {
                         MessageBox.Show("No se puede crear el usuario porque este ya existe");
+                        //lblidcl.Text == ".................";
                     }
                             
 
@@ -136,7 +139,15 @@ namespace TP_DIPLOMA
                 }
             }
         }
-
+        public void DigitosVerificadores()
+        {
+            BLL.Digitos DV = new BLL.Digitos();
+            BLL.Bitacora Bi = new BLL.Bitacora();
+            long dv = 0;
+            dv = DV.DVH("select * from Usuarios where UsuDVH = 0", "Usuarios");
+            Bi.Consultar("update Usuarios set UsuDVH='" + dv + "' where UsuDVH = 0");
+            DV.InsertarDVV("Usuarios", "UsuDVH");
+        }
         private void button2_Click(object sender, EventArgs e)
         {
             foreach (BE.userauxiliar item in gestorusuarios.Listadeusu())

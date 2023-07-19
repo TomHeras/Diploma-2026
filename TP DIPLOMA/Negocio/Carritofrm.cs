@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Seguridad.Singleton;
 
 namespace TP_DIPLOMA.Negocio
 {
@@ -25,21 +26,18 @@ namespace TP_DIPLOMA.Negocio
         BLL.Maestros.Productos getprod = new BLL.Maestros.Productos();
         private void Carritofrm_Load(object sender, EventArgs e)
         {
+            // TODO: esta línea de código carga datos en la tabla 'tPMODELOSDataSet9.Stock' Puede moverla o quitarla según sea necesario.
+            this.stockTableAdapter1.Fill(this.tPMODELOSDataSet9.Stock);
+            // TODO: esta línea de código carga datos en la tabla 'tPMODELOSDataSet8.Clientes' Puede moverla o quitarla según sea necesario.
+            this.clientesTableAdapter2.Fill(this.tPMODELOSDataSet8.Clientes);
             // TODO: esta línea de código carga datos en la tabla 'tPMODELOSDataSet4.Clientes' Puede moverla o quitarla según sea necesario.
-            this.clientesTableAdapter1.Fill(this.tPMODELOSDataSet4.Clientes);
+            //this.clientesTableAdapter1.Fill(this.tPMODELOSDataSet4.Clientes); DE LA DE ESCRITORIO
 
             // TODO: esta línea de código carga datos en la tabla 'tPMODELOSDataSet3.Stock' Puede moverla o quitarla según sea necesario.
-            this.stockTableAdapter.Fill(this.tPMODELOSDataSet3.Stock);
+            //this.stockTableAdapter.Fill(this.tPMODELOSDataSet3.Stock);ESCRITORIO
             // TODO: esta línea de código carga datos en la tabla 'tPMODELOSDataSet2.Clientes' Puede moverla o quitarla según sea necesario.
-            this.clientesTableAdapter.Fill(this.tPMODELOSDataSet2.Clientes);
-            //foreach (var item in getcl.listar())
-            //{
-            //    comboBox1.Items.Add(item);
-            //}
-            //foreach (var item in getprod.listar())
-            //{
-            //    comboBox2.Items.Add(item);
-            //}
+            //this.clientesTableAdapter.Fill(this.tPMODELOSDataSet2.Clientes);ESCRITORIO
+            
             comboBox1.SelectedIndex = -1;
             comboBox2.SelectedIndex = -1;
         }
@@ -148,6 +146,15 @@ namespace TP_DIPLOMA.Negocio
         BE.Negocio.Pedido_det detalle = new BE.Negocio.Pedido_det();
 
         BLL.Negocio.Pedidos pedidos = new BLL.Negocio.Pedidos();
+        public void DigitosVerificadores()
+        {
+            BLL.Digitos DV = new BLL.Digitos();
+            BLL.Bitacora Bi = new BLL.Bitacora();
+            long dv = 0;
+            dv = DV.DVH("select * from Pedidosdet where DVH = 0", "Pedidosdet");
+            Bi.Consultar("update Pedidosdet set DVH='" + dv + "' where DVH = 0");
+            DV.InsertarDVV("Pedidosdet", "DVH");
+        }
         private void btnfactura_Click(object sender, EventArgs e)
         {
             var idcl = gestorcl.listar()[comboBox1.SelectedIndex].Idcl;
@@ -170,9 +177,10 @@ namespace TP_DIPLOMA.Negocio
                     detalle.ID_producto = item.Idprod;
                     detalle.Cantidad = item.Cant;
                     detalle.Costo = item.Costo;
-
+                    detalle.DVH = 0;
+                   
                     pedidos.Cargardet(detalle);
-                    
+                    DigitosVerificadores();
 
                 }
 
@@ -197,7 +205,23 @@ namespace TP_DIPLOMA.Negocio
 
             MessageBox.Show("Factura generada exitosamente");
             enlazar();
+            CargarBitacora(SingletonSesion.Instancia.Usuario.usuario, "Generacion de Facutra", "Media", "Facturas");
+        }
+        BLL.Bitacora gestorbitacora = new BLL.Bitacora();
+        BE.Bitacora BitacoraTemp;
 
+        void CargarBitacora(string Nick, string Descripcion, string Criticidad, string modulo)
+        {
+            BitacoraTemp = new BE.Bitacora();
+
+            BitacoraTemp.NickUsuario = Nick;
+            BitacoraTemp.Fecha = DateTime.Now;
+            //BitacoraTemp.Hora = DateTime.Parse( DateTime.Now.ToShortTimeString());
+            BitacoraTemp.Modulo = modulo;
+            BitacoraTemp.Descripcion = Descripcion;
+            BitacoraTemp.Criticidad = Criticidad;
+
+            gestorbitacora.InsertarBitacora(BitacoraTemp);
         }
     }
 }

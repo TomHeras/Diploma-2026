@@ -85,5 +85,12 @@ namespace BLL
 
             return fa;
         }
+
+
+        public List<BE.Usuario> Listarnicks()
+        {
+            List<BE.Usuario> listausu = Mapper.traernicks();
+            return listausu;
+        }
     }
 }

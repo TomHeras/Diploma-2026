@@ -82,7 +82,9 @@ namespace DAL.Maestros
 
         public void llenar()
         {
+            
             acces.Leer("llenartabla", null);
+            acces.ejecutarconsulta("update Precios set DVH=0 ");
         }
         public void cambiara0()
         {

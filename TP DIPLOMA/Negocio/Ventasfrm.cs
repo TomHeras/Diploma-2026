@@ -19,15 +19,17 @@ namespace TP_DIPLOMA.Negocio
         public void enlazar()
         {
             // TODO: esta línea de código carga datos en la tabla 'tPMODELOSDataSet6.estados' Puede moverla o quitarla según sea necesario.
-            this.estadosTableAdapter.Fill(this.tPMODELOSDataSet6.estados);
+            //this.estadosTableAdapter.Fill(this.tPMODELOSDataSet6.estados);
             dataGridView1.DataSource = null;
             dataGridView1.DataSource = gestorped.listarcabecera();
 
         }
         private void Ventasfrm_Load(object sender, EventArgs e)
         {
+            // TODO: esta línea de código carga datos en la tabla 'tPMODELOSDataSet11.estados' Puede moverla o quitarla según sea necesario.
+            this.estadosTableAdapter1.Fill(this.tPMODELOSDataSet11.estados);
             // TODO: esta línea de código carga datos en la tabla 'tPMODELOSDataSet6.estados' Puede moverla o quitarla según sea necesario.
-            this.estadosTableAdapter.Fill(this.tPMODELOSDataSet6.estados);
+            //this.estadosTableAdapter.Fill(this.tPMODELOSDataSet6.estados);ESCRITORIO
             enlazar();
         }
 
@@ -36,7 +38,7 @@ namespace TP_DIPLOMA.Negocio
 
         
 
-        private void button2_Click(object sender, EventArgs e)
+        private void button2_Click(object sender, EventArgs e)//buscar
         {
             var listcabecera=gestorped.listarcabecera().Where(x=>x.ID_pedido.ToString()==textBox1.Text).ToList();
 

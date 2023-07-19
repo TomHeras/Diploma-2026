@@ -76,6 +76,20 @@ namespace DAL
             return ListaUsuarios;
         }
 
+        public List<BE.Usuario> traernicks()
+        {
+            List<BE.Usuario> ListaUsuarios = new List<BE.Usuario>();
+            DataTable tabla = acceso.Leer("traernicks", null);
+
+            foreach (DataRow registro in tabla.Rows)
+            {
+                BE.Usuario usu = new BE.Usuario();                
+                usu.Nombre = registro["Usunick"].ToString();                
+                ListaUsuarios.Add(usu);
+            }
+
+            return ListaUsuarios;
+        }
 
         //para gestion de permisos de usuarios
       

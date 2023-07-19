@@ -70,10 +70,10 @@ namespace TP_DIPLOMA.Maestros
                 /////// procedimiento para cargar la lista de precios
                 gestprod.llenar();
                 gestprod.update0();
-                ///
+                ///aca
 
 
-
+                DigitosVerificadores();
                 MessageBox.Show("El producto fue registrado  con exito!");
 
                 enlazar();
@@ -84,7 +84,15 @@ namespace TP_DIPLOMA.Maestros
             }
         }
 
-
+        public void DigitosVerificadores()
+        {
+            BLL.Digitos DV = new BLL.Digitos();
+            BLL.Bitacora Bi = new BLL.Bitacora();
+            long dv = 0;
+            dv = DV.DVH("select * from Precios where DVH = 0", "Cursos");
+            Bi.Consultar("update Precios set DVH='" + dv + "' where DVH = 0");
+            DV.InsertarDVV("Precios", "DVH");
+        }
 
         private void button2_Click(object sender, EventArgs e)//borrar productos
         {
