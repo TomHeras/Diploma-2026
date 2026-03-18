@@ -30,22 +30,27 @@ namespace TP_DIPLOMA.Negocio
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Ventasfrm));
             this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.estadosBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.estadosBindingSource = new System.Windows.Forms.BindingSource(this.components);
-
             this.button1 = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.button2 = new System.Windows.Forms.Button();
-
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-
-            this.estadosBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-
-            ((System.ComponentModel.ISupportInitialize)(this.estadosBindingSource)).BeginInit();
-
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-
+            this.button3 = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.label5 = new System.Windows.Forms.Label();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.estadosBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.estadosBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // comboBox1
@@ -53,100 +58,183 @@ namespace TP_DIPLOMA.Negocio
             this.comboBox1.DataSource = this.estadosBindingSource1;
             this.comboBox1.DisplayMember = "descripcion";
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(47, 96);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.comboBox1.Location = new System.Drawing.Point(379, 442);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(160, 24);
+            this.comboBox1.Size = new System.Drawing.Size(136, 21);
             this.comboBox1.TabIndex = 1;
+            // 
+            // estadosBindingSource1
+            // 
+            this.estadosBindingSource1.DataMember = "estados";
             // 
             // estadosBindingSource
             // 
             this.estadosBindingSource.DataMember = "estados";
-
-            // 
-            // tPMODELOSDataSet6
-            // 
-
-
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(304, 96);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button1.Location = new System.Drawing.Point(551, 442);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(151, 28);
+            this.button1.Size = new System.Drawing.Size(113, 23);
             this.button1.TabIndex = 2;
+            this.button1.Tag = "btnestado";
             this.button1.Text = "Cambiar estado";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(47, 47);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox1.Location = new System.Drawing.Point(46, 41);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(160, 22);
+            this.textBox1.Size = new System.Drawing.Size(136, 20);
             this.textBox1.TabIndex = 3;
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(304, 47);
-            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button2.Location = new System.Drawing.Point(248, 38);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(128, 28);
+            this.button2.Size = new System.Drawing.Size(113, 23);
             this.button2.TabIndex = 4;
-            this.button2.Text = "Buscar";
+            this.button2.Tag = "btnbuscar";
+            this.button2.Text = "Buscar ";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // estadosTableAdapter
-            // 
-
             // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(47, 185);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dataGridView1.Location = new System.Drawing.Point(30, 179);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.Size = new System.Drawing.Size(572, 300);
+            this.dataGridView1.Size = new System.Drawing.Size(649, 243);
             this.dataGridView1.TabIndex = 5;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick_1);
             // 
-            // tPMODELOSDataSet11
+            // button3
             // 
-
-
+            this.button3.Location = new System.Drawing.Point(451, 67);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(142, 34);
+            this.button3.TabIndex = 6;
+            this.button3.Tag = "btnLimpiar";
+            this.button3.Text = "limpiar Filtros";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
-            // estadosBindingSource1
+            // label1
             // 
-            this.estadosBindingSource1.DataMember = "estados";
-
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(43, 145);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(38, 13);
+            this.label1.TabIndex = 7;
+            this.label1.Tag = "timeDesde";
+            this.label1.Text = "Desde";
             // 
-            // estadosTableAdapter1
+            // label2
             // 
-
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(338, 145);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(35, 13);
+            this.label2.TabIndex = 8;
+            this.label2.Tag = "timeHasta";
+            this.label2.Text = "Hasta";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(46, 25);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(60, 13);
+            this.label3.TabIndex = 9;
+            this.label3.Tag = "nro_pedido";
+            this.label3.Text = "Nro Pedido";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(321, 444);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(40, 13);
+            this.label4.TabIndex = 10;
+            this.label4.Tag = "estado";
+            this.label4.Text = "Estado";
+            // 
+            // radioButton1
+            // 
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.Location = new System.Drawing.Point(248, 102);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(102, 17);
+            this.radioButton1.TabIndex = 11;
+            this.radioButton1.TabStop = true;
+            this.radioButton1.Tag = "Pendientesrdb";
+            this.radioButton1.Text = "Solo Pendientes";
+            this.radioButton1.UseVisualStyleBackColor = true;
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Location = new System.Drawing.Point(101, 145);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.ShowCheckBox = true;
+            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
+            this.dateTimePicker1.TabIndex = 12;
+            // 
+            // dateTimePicker2
+            // 
+            this.dateTimePicker2.Location = new System.Drawing.Point(379, 145);
+            this.dateTimePicker2.Name = "dateTimePicker2";
+            this.dateTimePicker2.ShowCheckBox = true;
+            this.dateTimePicker2.Size = new System.Drawing.Size(200, 20);
+            this.dateTimePicker2.TabIndex = 13;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(49, 78);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(44, 13);
+            this.label5.TabIndex = 15;
+            this.label5.Tag = "clientes";
+            this.label5.Text = "Clientes";
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Location = new System.Drawing.Point(49, 98);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(133, 21);
+            this.comboBox2.TabIndex = 16;
             // 
             // Ventasfrm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(655, 522);
+            this.ClientSize = new System.Drawing.Size(713, 476);
+            this.Controls.Add(this.comboBox2);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.dateTimePicker2);
+            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.radioButton1);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.button3);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.comboBox1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Ventasfrm";
             this.Text = "Ventasfrm";
             this.Load += new System.EventHandler(this.Ventasfrm_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.estadosBindingSource)).EndInit();
-
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-
             ((System.ComponentModel.ISupportInitialize)(this.estadosBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.estadosBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -163,6 +251,15 @@ namespace TP_DIPLOMA.Negocio
         private System.Windows.Forms.DataGridView dataGridView1;
 
         private System.Windows.Forms.BindingSource estadosBindingSource1;
-
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dateTimePicker2;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.ComboBox comboBox2;
     }
 }

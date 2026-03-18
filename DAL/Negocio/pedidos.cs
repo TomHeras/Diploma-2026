@@ -217,5 +217,26 @@ namespace DAL.Negocio
         }
 
 
+        public List<BE.Auxiliares.Aux_JoinsNegocio> aux_cobros ()
+        {
+            List<BE.Auxiliares.Aux_JoinsNegocio> lista=new List<BE.Auxiliares.Aux_JoinsNegocio> ();
+            DataTable tavbla = acces.Leer("JoinCobros", null);
+
+            foreach (DataRow registro in tavbla.Rows)
+            {
+                BE.Auxiliares.Aux_JoinsNegocio join=new BE.Auxiliares.Aux_JoinsNegocio ();
+
+                join.ID_pedido= int.Parse(registro["ID_pedido"].ToString());
+                join.Cliente = registro["Cliente"].ToString();
+                join.Total = double.Parse(registro["Total"].ToString());
+                join.Estado= registro["Estado"].ToString();
+                join.Generado = DateTime.Parse(registro["FechaGen"].ToString());
+                join.Actualizado= DateTime.Parse(registro["FechaAct"].ToString());
+
+                lista.Add(join);
+            }
+            return lista;
+        }
+
     }
 }

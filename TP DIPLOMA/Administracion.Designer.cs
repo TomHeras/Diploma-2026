@@ -118,7 +118,7 @@ namespace TP_DIPLOMA
             this.tooltripgestionidioma,
             this.tooltriplista});
             this.tsmiidioma.Name = "tsmiidioma";
-            this.tsmiidioma.Size = new System.Drawing.Size(143, 22);
+            this.tsmiidioma.Size = new System.Drawing.Size(180, 22);
             this.tsmiidioma.Tag = "idioma";
             this.tsmiidioma.Text = "Idioma";
             // 
@@ -151,7 +151,7 @@ namespace TP_DIPLOMA
             this.usuarioToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.cambiarClaveToolStripMenuItem});
             this.usuarioToolStripMenuItem.Name = "usuarioToolStripMenuItem";
-            this.usuarioToolStripMenuItem.Size = new System.Drawing.Size(143, 22);
+            this.usuarioToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.usuarioToolStripMenuItem.Tag = "usuario";
             this.usuarioToolStripMenuItem.Text = "Usuario";
             // 
@@ -166,7 +166,7 @@ namespace TP_DIPLOMA
             // mnulogut
             // 
             this.mnulogut.Name = "mnulogut";
-            this.mnulogut.Size = new System.Drawing.Size(143, 22);
+            this.mnulogut.Size = new System.Drawing.Size(180, 22);
             this.mnulogut.Tag = "cerrarsesion";
             this.mnulogut.Text = "Cerrar Sesion";
             this.mnulogut.Click += new System.EventHandler(this.mnulogut_Click);
@@ -188,7 +188,7 @@ namespace TP_DIPLOMA
             // tooltrippermisos
             // 
             this.tooltrippermisos.Name = "tooltrippermisos";
-            this.tooltrippermisos.Size = new System.Drawing.Size(177, 22);
+            this.tooltrippermisos.Size = new System.Drawing.Size(180, 22);
             this.tooltrippermisos.Tag = "famypat";
             this.tooltrippermisos.Text = "Perfiles";
             this.tooltrippermisos.Click += new System.EventHandler(this.tooltrippermisos_Click);
@@ -196,7 +196,7 @@ namespace TP_DIPLOMA
             // tooltrippermisousuario
             // 
             this.tooltrippermisousuario.Name = "tooltrippermisousuario";
-            this.tooltrippermisousuario.Size = new System.Drawing.Size(177, 22);
+            this.tooltrippermisousuario.Size = new System.Drawing.Size(180, 22);
             this.tooltrippermisousuario.Tag = "usuarios";
             this.tooltrippermisousuario.Text = "Asignacion";
             this.tooltrippermisousuario.Click += new System.EventHandler(this.tooltrippermisousuario_Click);
@@ -204,7 +204,7 @@ namespace TP_DIPLOMA
             // tsmabmusuarios
             // 
             this.tsmabmusuarios.Name = "tsmabmusuarios";
-            this.tsmabmusuarios.Size = new System.Drawing.Size(177, 22);
+            this.tsmabmusuarios.Size = new System.Drawing.Size(180, 22);
             this.tsmabmusuarios.Tag = "Gestion de usuarios";
             this.tsmabmusuarios.Text = "Gestion de usuarios";
             this.tsmabmusuarios.Click += new System.EventHandler(this.gestionDeUsuariosToolStripMenuItem_Click);
@@ -215,7 +215,8 @@ namespace TP_DIPLOMA
             this.bitacoraDeEventosToolStripMenuItem,
             this.bitacoraDeCambiosToolStripMenuItem});
             this.bitacoraToolStripMenuItem.Name = "bitacoraToolStripMenuItem";
-            this.bitacoraToolStripMenuItem.Size = new System.Drawing.Size(177, 22);
+            this.bitacoraToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.bitacoraToolStripMenuItem.Tag = "BitacoraStrip";
             this.bitacoraToolStripMenuItem.Text = "Bitacora";
             this.bitacoraToolStripMenuItem.Click += new System.EventHandler(this.bitacoraToolStripMenuItem_Click_1);
             // 
@@ -223,6 +224,7 @@ namespace TP_DIPLOMA
             // 
             this.bitacoraDeEventosToolStripMenuItem.Name = "bitacoraDeEventosToolStripMenuItem";
             this.bitacoraDeEventosToolStripMenuItem.Size = new System.Drawing.Size(181, 22);
+            this.bitacoraDeEventosToolStripMenuItem.Tag = "Eventossrip";
             this.bitacoraDeEventosToolStripMenuItem.Text = "Bitacora de Eventos";
             this.bitacoraDeEventosToolStripMenuItem.Click += new System.EventHandler(this.bitacoraDeEventosToolStripMenuItem_Click);
             // 
@@ -230,13 +232,15 @@ namespace TP_DIPLOMA
             // 
             this.bitacoraDeCambiosToolStripMenuItem.Name = "bitacoraDeCambiosToolStripMenuItem";
             this.bitacoraDeCambiosToolStripMenuItem.Size = new System.Drawing.Size(181, 22);
+            this.bitacoraDeCambiosToolStripMenuItem.Tag = "Cambiostrip";
             this.bitacoraDeCambiosToolStripMenuItem.Text = "Bitacora de cambios";
             this.bitacoraDeCambiosToolStripMenuItem.Click += new System.EventHandler(this.bitacoraDeCambiosToolStripMenuItem_Click);
             // 
             // respaldosToolStripMenuItem
             // 
             this.respaldosToolStripMenuItem.Name = "respaldosToolStripMenuItem";
-            this.respaldosToolStripMenuItem.Size = new System.Drawing.Size(177, 22);
+            this.respaldosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.respaldosToolStripMenuItem.Tag = "Bckstrip";
             this.respaldosToolStripMenuItem.Text = "Respaldos";
             this.respaldosToolStripMenuItem.Click += new System.EventHandler(this.respaldosToolStripMenuItem_Click);
             // 
@@ -255,14 +259,14 @@ namespace TP_DIPLOMA
             this.ventasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.carritoToolStripMenuItem});
             this.ventasToolStripMenuItem.Name = "ventasToolStripMenuItem";
-            this.ventasToolStripMenuItem.Size = new System.Drawing.Size(136, 22);
-            this.ventasToolStripMenuItem.Tag = "venta";
+            this.ventasToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.ventasToolStripMenuItem.Tag = "ventastrip";
             this.ventasToolStripMenuItem.Text = "Ventas";
             // 
             // carritoToolStripMenuItem
             // 
             this.carritoToolStripMenuItem.Name = "carritoToolStripMenuItem";
-            this.carritoToolStripMenuItem.Size = new System.Drawing.Size(110, 22);
+            this.carritoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.carritoToolStripMenuItem.Tag = "carrito";
             this.carritoToolStripMenuItem.Text = "Carrito";
             this.carritoToolStripMenuItem.Click += new System.EventHandler(this.carritoToolStripMenuItem_Click);
@@ -273,15 +277,15 @@ namespace TP_DIPLOMA
             this.facturasToolStripMenuItem,
             this.cobrosToolStripMenuItem});
             this.facturacionToolStripMenuItem.Name = "facturacionToolStripMenuItem";
-            this.facturacionToolStripMenuItem.Size = new System.Drawing.Size(136, 22);
-            this.facturacionToolStripMenuItem.Tag = "facturacion";
+            this.facturacionToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.facturacionToolStripMenuItem.Tag = "faqstrip";
             this.facturacionToolStripMenuItem.Text = "Facturacion";
             this.facturacionToolStripMenuItem.Click += new System.EventHandler(this.facturacionToolStripMenuItem_Click);
             // 
             // facturasToolStripMenuItem
             // 
             this.facturasToolStripMenuItem.Name = "facturasToolStripMenuItem";
-            this.facturasToolStripMenuItem.Size = new System.Drawing.Size(118, 22);
+            this.facturasToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.facturasToolStripMenuItem.Tag = "facturas";
             this.facturasToolStripMenuItem.Text = "Facturas";
             this.facturasToolStripMenuItem.Click += new System.EventHandler(this.facturasToolStripMenuItem_Click);
@@ -289,8 +293,8 @@ namespace TP_DIPLOMA
             // cobrosToolStripMenuItem
             // 
             this.cobrosToolStripMenuItem.Name = "cobrosToolStripMenuItem";
-            this.cobrosToolStripMenuItem.Size = new System.Drawing.Size(118, 22);
-            this.cobrosToolStripMenuItem.Tag = "pagos";
+            this.cobrosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.cobrosToolStripMenuItem.Tag = "pagosstrip";
             this.cobrosToolStripMenuItem.Text = "Cobros";
             this.cobrosToolStripMenuItem.Click += new System.EventHandler(this.cobrosToolStripMenuItem_Click);
             // 
@@ -310,34 +314,39 @@ namespace TP_DIPLOMA
             this.detallesToolStripMenuItem,
             this.ordenesDeCompraToolStripMenuItem});
             this.ordenDeCompraToolStripMenuItem.Name = "ordenDeCompraToolStripMenuItem";
-            this.ordenDeCompraToolStripMenuItem.Size = new System.Drawing.Size(167, 22);
+            this.ordenDeCompraToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.ordenDeCompraToolStripMenuItem.Tag = "ordenstrip";
             this.ordenDeCompraToolStripMenuItem.Text = "Orden de compra";
             // 
             // ordenesToolStripMenuItem
             // 
             this.ordenesToolStripMenuItem.Name = "ordenesToolStripMenuItem";
-            this.ordenesToolStripMenuItem.Size = new System.Drawing.Size(178, 22);
+            this.ordenesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.ordenesToolStripMenuItem.Tag = "Cotizarstrip";
             this.ordenesToolStripMenuItem.Text = "Cotizaciones";
             this.ordenesToolStripMenuItem.Click += new System.EventHandler(this.ordenesToolStripMenuItem_Click);
             // 
             // detallesToolStripMenuItem
             // 
             this.detallesToolStripMenuItem.Name = "detallesToolStripMenuItem";
-            this.detallesToolStripMenuItem.Size = new System.Drawing.Size(178, 22);
+            this.detallesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.detallesToolStripMenuItem.Tag = "detallesstrip";
             this.detallesToolStripMenuItem.Text = "Detalles ";
             this.detallesToolStripMenuItem.Click += new System.EventHandler(this.detallesToolStripMenuItem_Click);
             // 
             // ordenesDeCompraToolStripMenuItem
             // 
             this.ordenesDeCompraToolStripMenuItem.Name = "ordenesDeCompraToolStripMenuItem";
-            this.ordenesDeCompraToolStripMenuItem.Size = new System.Drawing.Size(178, 22);
+            this.ordenesDeCompraToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.ordenesDeCompraToolStripMenuItem.Tag = "ordersstrip";
             this.ordenesDeCompraToolStripMenuItem.Text = "Ordenes de compra";
             this.ordenesDeCompraToolStripMenuItem.Click += new System.EventHandler(this.ordenesDeCompraToolStripMenuItem_Click);
             // 
             // comprasToolStripMenuItem1
             // 
             this.comprasToolStripMenuItem1.Name = "comprasToolStripMenuItem1";
-            this.comprasToolStripMenuItem1.Size = new System.Drawing.Size(167, 22);
+            this.comprasToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.comprasToolStripMenuItem1.Tag = "compras";
             this.comprasToolStripMenuItem1.Text = "Compras";
             this.comprasToolStripMenuItem1.Click += new System.EventHandler(this.comprasToolStripMenuItem1_Click);
             // 
@@ -404,6 +413,7 @@ namespace TP_DIPLOMA
             // 
             this.reporteDeVentasToolStripMenuItem.Name = "reporteDeVentasToolStripMenuItem";
             this.reporteDeVentasToolStripMenuItem.Size = new System.Drawing.Size(188, 22);
+            this.reporteDeVentasToolStripMenuItem.Tag = "Report1";
             this.reporteDeVentasToolStripMenuItem.Text = "Reporte de Productos";
             this.reporteDeVentasToolStripMenuItem.Click += new System.EventHandler(this.reporteDeVentasToolStripMenuItem_Click);
             // 

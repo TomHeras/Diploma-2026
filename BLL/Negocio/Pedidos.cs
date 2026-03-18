@@ -95,5 +95,10 @@ namespace BLL.Negocio
         {
             return mapper.ReporteCompras();
         }
+
+        public List<BE.Auxiliares.Aux_JoinsNegocio> JoinsCobros()
+        {
+            return mapper.aux_cobros();
+        }
     }
 }
